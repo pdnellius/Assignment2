@@ -30,6 +30,7 @@ class FirstViewController: UIViewController {
         helloWorld()
         calcNameAndAge(nameField.text, age: ageField.text)
         userAllowedToBeGrownup(nameField.text, userAge: ageField.text.toInt()!)
+        userAllowedToBeGrownupConcat(nameField.text, age: ageField.text.toInt()!)
     }
     //Two
     func calcNameAndAge(name:String, age:String) {
@@ -39,20 +40,26 @@ class FirstViewController: UIViewController {
     //Three
     func userAllowedToBeGrownup(userName:String, userAge:Int) {
         if userAge >= 21 {
-            helloWorldLabel.text? += ("You can drink!")
+            helloWorldLabel.text? += ("You can drink!\n")
         } else if userAge >= 18 {
-            helloWorldLabel.text? += ("You can vote")
+            helloWorldLabel.text? += ("You can vote\n")
         } else if userAge >= 16 {
-            helloWorldLabel.text? += ("You can drive")
+            helloWorldLabel.text? += ("You can drive\n")
         } else {
-            helloWorldLabel.text? += ("You are too young to do anything exciting.")
+            helloWorldLabel.text? += ("You are too young to do anything exciting.\n")
         }
     }
     
     // Four
     
     func userAllowedToBeGrownupConcat (name:String, age:Int) {
-        
+        if age >= 16 && age < 18 {
+            helloWorldLabel.text? += ("You can drive")
+        } else if age >= 18 && age < 21 {
+            helloWorldLabel.text? += ("You can drive and vote")
+        } else if age >= 21 {
+            helloWorldLabel.text? += ("You can drive, vote, and drink (but not at the same time")
+        }
     }
     
     

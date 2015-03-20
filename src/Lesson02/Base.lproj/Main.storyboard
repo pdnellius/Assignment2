@@ -94,7 +94,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ageField" destination="HD3-Of-BAd" id="J68-eB-4Sz"/>
                         <outlet property="helloWorldLabel" destination="v2W-sh-fBn" id="1CK-y5-MZe"/>
+                        <outlet property="nameField" destination="dvu-Gz-gU3" id="Kbp-tC-Ggl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

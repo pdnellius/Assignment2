@@ -22,21 +22,38 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var helloWorldLabel: UILabel!
     
     func helloWorld() {
-        helloWorldLabel.text = "Hello, world."
+        helloWorldLabel.text = "Hello, world.\n"
     }
     
     // One
     @IBAction func helloWorldButton(sender: AnyObject) {
         helloWorld()
         calcNameAndAge(nameField.text, age: ageField.text)
+        userAllowedToBeGrownup(nameField.text, userAge: ageField.text.toInt()!)
     }
     //Two
     func calcNameAndAge(name:String, age:String) {
-        println("Hello \(name), you are \(age) years old")
+        helloWorldLabel.text? += ("Hello \(name), you are \(age) years old\n")
     }
     
     //Three
-    func 
+    func userAllowedToBeGrownup(userName:String, userAge:Int) {
+        if userAge >= 21 {
+            helloWorldLabel.text? += ("You can drink!")
+        } else if userAge >= 18 {
+            helloWorldLabel.text? += ("You can vote")
+        } else if userAge >= 16 {
+            helloWorldLabel.text? += ("You can drive")
+        } else {
+            helloWorldLabel.text? += ("You are too young to do anything exciting.")
+        }
+    }
+    
+    // Four
+    
+    func userAllowedToBeGrownupConcat (name:String, age:Int) {
+        
+    }
     
     
     

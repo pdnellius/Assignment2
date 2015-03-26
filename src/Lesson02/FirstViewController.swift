@@ -26,9 +26,15 @@ class FirstViewController: UIViewController {
     // One
     @IBAction func helloWorldButton(sender: AnyObject) {
         helloWorld()
-        calcNameAndAge(nameField.text, age: ageField.text)
-        userAllowedToBeGrownup(nameField.text, userAge: ageField.text.toInt()!)
-        userAllowedToBeGrownupConcat(nameField.text, age: ageField.text.toInt()!)
+        if let ageFieldInt = ageField.text.toInt() {
+            calcNameAndAge(nameField.text, age: ageField.text)
+            userAllowedToBeGrownup(nameField.text, userAge: ageField.text.toInt()!)
+            userAllowedToBeGrownupConcat(nameField.text, age: ageField.text.toInt()!)
+        } else {
+            helloWorldLabel.text = "Please enter a valid age"
+        }
+        
+        
     }
     //Two
     func calcNameAndAge(name:String, age:String) {

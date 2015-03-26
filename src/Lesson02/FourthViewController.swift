@@ -14,7 +14,7 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var fibLabel: UILabel!
     @IBAction func calculateFib(sender: AnyObject) {
         var fibonacci = FibonacciAdder()
-        if numberField.text != nil {
+        if let numberFieldInt = numberField.text.toInt() {
             fibLabel.text = fibonacci.fibonacciNumberAtIndex(numberField.text.toInt()!)
         } else {
             fibLabel.text = "Please enter a number"

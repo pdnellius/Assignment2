@@ -115,16 +115,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-6d-s2d">
-                                <rect key="frame" x="263" y="157" width="74" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="a5L-Tb-BsM"/>
-                                    <constraint firstAttribute="width" constant="74" id="xjJ-ke-pIy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsS-73-FSq">
                                 <rect key="frame" x="217" y="103" width="167" height="30"/>
                                 <constraints>
@@ -147,14 +137,24 @@
                                     <action selector="addButton:" destination="DXI-gN-4Tg" eventType="touchUpInside" id="rkt-Lg-aFw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-6d-s2d">
+                                <rect key="frame" x="180" y="154" width="241" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="a5L-Tb-BsM"/>
+                                    <constraint firstAttribute="width" constant="241" id="xjJ-ke-pIy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="BLG-wH-QXc" secondAttribute="centerX" id="3CF-ad-o7X"/>
-                            <constraint firstItem="qiz-6d-s2d" firstAttribute="top" secondItem="dsS-73-FSq" secondAttribute="bottom" constant="24" id="BXf-ge-u2s"/>
+                            <constraint firstItem="qiz-6d-s2d" firstAttribute="top" secondItem="dsS-73-FSq" secondAttribute="bottom" constant="21" id="BXf-ge-u2s"/>
                             <constraint firstAttribute="centerX" secondItem="qiz-6d-s2d" secondAttribute="centerX" id="dhr-vr-JtN"/>
                             <constraint firstAttribute="centerX" secondItem="dsS-73-FSq" secondAttribute="centerX" id="otl-Re-q0Q"/>
-                            <constraint firstItem="BLG-wH-QXc" firstAttribute="top" secondItem="qiz-6d-s2d" secondAttribute="bottom" constant="17" id="sze-Nk-HWC"/>
+                            <constraint firstItem="BLG-wH-QXc" firstAttribute="top" secondItem="qiz-6d-s2d" secondAttribute="bottom" constant="20" id="sze-Nk-HWC"/>
                             <constraint firstItem="dsS-73-FSq" firstAttribute="top" secondItem="KNu-MI-cVx" secondAttribute="bottom" constant="39" id="w2m-Ix-kyX"/>
                         </constraints>
                     </view>

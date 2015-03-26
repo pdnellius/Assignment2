@@ -13,7 +13,7 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var fibLabel: UILabel!
     @IBAction func calculateFib(sender: AnyObject) {
-
+        var fibonacci = FibonacciAdder()
         if numberField.text != nil {
             fibLabel.text = fibonacci.fibonacciNumberAtIndex(numberField.text.toInt()!)
         } else {
@@ -31,7 +31,7 @@ class FourthViewController: UIViewController {
     class FibonacciAdder {
         
         
-        func fibonacciNumberAtIndex (indexOfFibonacciNumber: Int) -> Int {
+        func fibonacciNumberAtIndex (indexOfFibonacciNumber: Int) -> String {
             var fibArray = [0,1]
             for var j = 0; j < indexOfFibonacciNumber; j++ {
                 var n1 = fibArray[fibArray.count - 1]
@@ -39,7 +39,7 @@ class FourthViewController: UIViewController {
                 var n3 = n1+n2
                 fibArray.append(n3)
             }
-        return (fibArray[indexOfFibonacciNumber-1])
+        return (String(fibArray[indexOfFibonacciNumber]))
         }
         
     }
